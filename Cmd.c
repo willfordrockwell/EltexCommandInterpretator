@@ -153,7 +153,7 @@ int main(int argc, char const *argv[])
         }
 
         for (int i = 0; i < 2 * Pipe_Entries; i++) {
-            if (i != 1) {
+            if (i % 2 != 0 && i != 2 * Pipe_Entries - 1) {
                 close(Pipes[i]);
             }
         }
